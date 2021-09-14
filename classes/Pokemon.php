@@ -1,23 +1,23 @@
 <?php
 class Pokemon{
-    public $name;
-    public $energytype;
-    public $hitpoints;
-    public $health;
-    public $attacks;
-    public $weakness;
-    public $resistance;
+    public $Name;
+    public $EnergyType;
+    public $HitPoints;
+    public $Health;
+    public $Attack;
+    public $Weakness;
+    public $Resistance;
 
-    public function __construct($name, $energytype, $hitpoints, $health, $attacks, $weakness, $resistance){
-        $this->name = $name;
-        $this->energytype = $energytype;
-        $this->hitpoints = $hitpoints;
-        $this->health = $health;
-        $this->attacks = $attacks;
-        $this->weakness = $weakness;
-        $this->resistance = $resistance;
+    public function __construct($Name, $EnergyType, $HitPoints, $Health, $Attacks, $Weakness, $Resistance){
+        $this->Name = $Name;
+        $this->Energytype = $EnergyType;
+        $this->Hitpoints = $HitPoints;
+        $this->Health = $Health;
+        $this->Attack = $Attack;
+        $this->Weakness = $Weakness;
+        $this->Resistance = $Resistance;
     }
-
+    
     public function __toString() {
         return json_encode($this);
     }
