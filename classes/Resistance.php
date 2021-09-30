@@ -1,10 +1,14 @@
 <?php
 class Resistance{
-    public $EnergyType;
+    public $energyType;
     public $number;
 
-    public function __construct(){
-        $this->Energytype = $EnergyType;
+    public function __construct($energyType, $number){
+        $this->energyType = $energyType;
         $this->number = $number;
+    }
+
+    public function __toString() {
+        return json_encode($this);
     }
 }

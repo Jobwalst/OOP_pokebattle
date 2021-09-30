@@ -4,11 +4,8 @@ spl_autoload_register(function ($class_name) {
     include 'classes/' . $class_name . '.php';
 });
 
-//$lightning = new EnergyType('lightning', 10);
-//$pokemon = new Pokemon('test', $lightning);
-$pikachu = new Pikachu('Jan');
+$pika = new Pikachu('Pika');
+$char = new Charmeleon('Char');
 
-//echo($lightning);
-//echo($pokemon);
-echo($pikachu);
+echo($pika . '<br>' . $char);
 ?>
