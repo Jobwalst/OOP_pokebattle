@@ -38,12 +38,16 @@ class Pokemon{ //This is the main pokemon class, the classes: pikachu and charme
         else{
             $target->health -= $attack->damage;
         }
+
+        if($target->health <= 0){
+            self::$getAlive--;
+        }
         
         return $target->health;
     }
 
     public static function getPopulation(){ //static methods can be called directly, without creating an instance of a class first
-        return self::$getAlive; //returns the public static var $getAlive
+        return '<br>' . 'Aantal levende pokemon = ' . self::$getAlive; //returns the public static var $getAlive
     }
 }
 
