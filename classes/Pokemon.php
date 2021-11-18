@@ -1,12 +1,12 @@
 <?php
 class Pokemon{ //This is the main pokemon class, the classes: pikachu and charmeleon are inherited from this class
-    public $name;
-    public $energyType;
-    public $hitPoints;
-    public $health;
-    public $attacks;
-    public $weakness;
-    public $resistance;
+    protected $name;
+    protected $energyType;
+    protected $hitPoints;
+    protected $health;
+    protected $attacks;
+    protected $weakness;
+    protected $resistance;
 
     public static $getAlive = 0;
 
@@ -48,6 +48,14 @@ class Pokemon{ //This is the main pokemon class, the classes: pikachu and charme
 
     public static function getPopulation(){ //static methods can be called directly, without creating an instance of a class first
         return '<br>' . 'Aantal levende pokemon = ' . self::$getAlive; //returns the public static var $getAlive
+    }
+
+    public function getAttacks(){ //fetches all the attacks a pokemon might have and returns them (you cannot access protected properties outside the class and/or inherited classes)
+        return $this->attacks;
+    }
+
+    public function getEnergyType(){ //same as above function but with only one energy type (fire, water, etc.)
+        return $this->energyType;
     }
 }
 
